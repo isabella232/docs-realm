@@ -66,7 +66,47 @@ see specific details about migrating your existing Stitch app to the Realm SDKs.
    .. tab::
       :tabid: javascript
 
-      Do we also need a tab for "web"?
+      Calling a Function From a Client App:
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      To execute a function from a JavaScript Client SDK, use the callFunction()
+      method.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      efficitur scelerisque nisi eu imperdiet. Sed nisl nibh, congue eget
+      egestas a, suscipit sed sem. Nunc eget dictum leo, in venenatis ligula. In
+      hendrerit lacus nec ullamcorper ultrices. Fusce tempus, dolor eu semper
+      placerat, justo dolor consequat leo, non mollis lectus enim quis massa. Ut
+      accumsan faucibus sodales. Quisque quis rutrum eros. Phasellus porta velit
+      laoreet justo sollicitudin sollicitudin. Fusce venenatis justo sit amet
+      diam elementum, eget sollicitudin odio placerat. Etiam tincidunt
+      condimentum diam, quis ultricies sem. Integer eu quam metus.
+
+
+      .. code-block:: javascript
+
+         const client = Stitch.defaultAppClient;
+         client.callFunction("sum", [3, 4]).then(result => {
+            console.log(result) // Output: 7
+         });
+
+      In the Node SDK you call functions as a logged in user with the
+      User.functions interface. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Morbi efficitur scelerisque nisi eu imperdiet. Sed nisl
+      nibh, congue eget egestas a, suscipit sed sem. Nunc eget dictum leo, in
+      venenatis ligula. In hendrerit lacus nec ullamcorper ultrices. Fusce
+      tempus, dolor eu semper placerat, justo dolor consequat leo, non mollis
+      lectus enim quis massa. Ut accumsan faucibus sodales. Quisque quis rutrum
+      eros. Phasellus porta velit laoreet justo sollicitudin sollicitudin. Fusce
+      venenatis justo sit amet diam elementum, eget sollicitudin odio placerat.
+      Etiam tincidunt condimentum diam, quis ultricies sem. Integer eu quam
+      metus.
+
+      .. code-block:: javascript
+
+         async function run(){
+            const result = await user.functions.sum(3, 4);
+            console.log(result) // Output: 7
+         }
+
 
    .. tab::
       :tabid: swift
